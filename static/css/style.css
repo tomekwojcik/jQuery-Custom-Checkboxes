@@ -1,0 +1,176 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+img {
+	border: 0px;
+}
+
+body {
+	font-family: Tahoma;
+	font-size: 14px;
+	color: #535353;
+	background: #F4F4F4;
+	margin: 1.5em;
+}
+
+h1,h2 {
+	font-size: 14px;
+}
+
+h2 {
+	font-weight: normal;
+	margin-bottom: 1em;
+}
+
+p, pre {
+	margin-bottom: 1em;
+}
+
+div.wrapper-demo {
+	padding: 9px;
+	width: 302px;
+	height: 462px;
+	background: transparent url('../img/stripped.png') repeat-y;
+	position: relative;
+	margin-bottom: 1em;
+}
+
+div.wrapper-demo p {
+	color: #4c596e;
+	margin-bottom: 9px;
+}
+
+a,
+a:active,
+a:visited {
+	color: #4c596e;
+	text-decoration: none;
+	outline: none;
+}
+
+a:hover {
+	color: #4c596e;
+	text-decoration: underline;
+}
+
+div.wrapper-demo p.comment {
+	width: 302px;
+	line-height: 16px;
+	text-align: center;
+	position: absolute;
+	bottom: 9px;
+	left: 9px;
+	margin-bottom: 0px;
+}
+
+div.wrapper-demo ul {
+	border: 1px solid #bbbbbb;
+	width: 300px;
+	background: #ffffff;
+	list-style: none;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	margin-bottom: 9px;
+}
+
+div.wrapper-demo ul li {
+	border-bottom: 1px solid #bbbbbb;
+	height: 43px;
+	line-height: 43px;
+	position: relative;
+}
+
+div.wrapper-demo ul li.last {
+	border-bottom: 0px none;
+}
+
+div.wrapper-demo ul li label {
+	display: block;
+	width: 283px;
+	height: 43px;
+	color: #000000;
+	font-weight: bold;
+	padding-left: 17px;
+}
+
+div.wrapper-demo ul li input {
+	position: absolute;
+	top: 13px;
+	right: 17px;
+	z-index: 50;
+}
+
+div.checkbox {
+	width: 300px;
+	position: relative;
+	height: 24px;
+	line-height: 24px;
+}
+
+div.wrapper-demo ul li div.jquery-checkbox-wrapper {
+	position: absolute;
+	width: 16px;
+	height: 16px;
+	top: 14px;
+	right: 17px;
+	z-index: 50;
+}
+
+div.wrapper-demo ul li div.jquery-checkbox-wrapper a.jquery-checkbox {
+	background: transparent url('../img/checkbox.png') repeat scroll 0px 0px;
+	display: block;
+	width: 16px;
+	height: 16px;
+	cursor: default;
+	outline: none;
+}
+
+div.wrapper-demo ul li div.jquery-checkbox-wrapper a.jquery-checkbox-on {
+	background-position: 16px 0px;
+}
+
+div.wrapper-demo ul li div.jquery-switch-wrapper {
+	position: absolute;
+	width: 94px;
+	height: 27px;
+	top: 8px;
+	right: 17px;
+	z-index: 50;
+}
+
+div.wrapper-demo ul li div.jquery-switch-wrapper a.jquery-switch {
+	background: transparent url('../img/switches.png') repeat scroll 0px 0px;
+	display: block;
+	width: 94px;
+	height: 27px;
+	cursor: default;
+	outline: none;
+}
+
+div.wrapper-demo ul li div.jquery-switch-wrapper a.jquery-switch-on {
+	background-position: 0px 27px;
+}
+
+div.wrapper-demo ul li div.jquery-tick-wrapper {
+	position: absolute;
+	width: 13px;
+	height: 13px;
+	top: 15px;
+	right: 17px;
+	z-index: 50;
+}
+
+div.wrapper-demo ul li div.jquery-tick-wrapper a.jquery-tick {
+	background: transparent url('../img/check.png') repeat scroll 0px 0px;
+	display: block;
+	width: 13px;
+	height: 13px;
+	cursor: default;
+	outline: none;
+}
+
+div.wrapper-demo ul li div.jquery-tick-wrapper a.jquery-tick-on {
+	background-position: 0px 13px;
+}

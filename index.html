@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>jQuery Checkbox Plugin by Tomek Wójcik</title>
+		<link rel="stylesheet" type="text/css" href="static/css/style.css" />
+		<script type="text/javascript" src="static/js/jquery-1.4.2.min.js"></script>
+		<script type="text/javascript" src="static/js/jquery-checkbox-1.0.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function () {
+				$('#demo1 input').checkbox();
+				
+				$('#demo2 input').checkbox({
+					className: 'jquery-switch',
+					checkedClass: 'jquery-switch-on',
+				});
+				
+				$('#demo3 input').checkbox({
+					className: 'jquery-tick',
+					checkedClass: 'jquery-tick-on',
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<h1>jQuery Checkbox Plugin by Tomek Wójcik</h1>
+		<h2>Dead simple custom checkboxes jQuery plugin</h2>
+		<p>This is a very simple checkbox plugin for jQuery. It's simple, lightweight and easily styllable.</p>
+		<p><strong>Demo</strong></p>
+		<div class="wrapper-demo">
+			<p>Checkboxes</p>
+			<ul id="demo1">
+				<li>
+					<label for="Check1">Option 1</label>
+					<input type="checkbox" name="check1" id="Check1" value="1" checked="checked" />
+				</li>
+				<li class="last">
+					<label for="Check2">Option 2</label>
+					<input type="checkbox" name="check2" id="Check2" value="2" />
+				</li>
+			</ul>
+			<p>Switches</p>
+			<ul id="demo2">
+				<li>
+					<label for="Check3">Option 3</label>
+					<input type="checkbox" name="check3" id="Check3" value="3" checked="checked" />
+				</li>
+				<li class="last">
+					<label for="Check4">Option 4</label>
+					<input type="checkbox" name="check4" id="Check4" value="4" />
+				</li>
+			</ul>
+			<p>Tick</p>
+			<ul id="demo3">
+				<li>
+					<label for="Check5">Option 5</label>
+					<input type="checkbox" name="check5" id="Check5" value="5" checked="checked" />
+				</li>
+				<li class="last">
+					<label for="Check6">Option 6</label>
+					<input type="checkbox" name="check6" id="Check6" value="6" />
+				</li>
+			</ul>
+			<p class="comment">Graphics taken from <a href="http://www.teehanlax.com/blog/2010/06/14/iphone-gui-psd-v4/" target="_blank">iPhone GUI PSD</a></p>
+		</div>
+		<p><strong>Usage</strong></p>
+		<p>HTML:</p>
+<pre style="text-align:left;color:#ffffff; background-color:#181818; border:solid black 1px; padding:0.5em 1em 0.5em 1em; overflow:auto;font-size:small; font-family:monospace; "><span style="color:#ed77e5;">&lt;div </span><span style="color:#ffab66;">class</span><span style="color:#ed77e5;">=</span><span style="color:#5959e5;">&quot;checkbox&quot;</span><span style="color:#ed77e5;">&gt;</span>
+    <span style="color:#ed77e5;">&lt;label </span><span style="color:#ffab66;">for</span><span style="color:#ed77e5;">=</span><span style="color:#5959e5;">&quot;Check1&quot;</span><span style="color:#ed77e5;">&gt;</span>Option 1<span style="color:#ed77e5;">&lt;/label&gt;</span>
+    <span style="color:#ed77e5;">&lt;input </span><span style="color:#ffab66;">type</span><span style="color:#ed77e5;">=</span><span style="color:#5959e5;">&quot;checkbox&quot;</span><span style="color:#ed77e5;"> </span><span style="color:#ffab66;">name</span><span style="color:#ed77e5;">=</span><span style="color:#5959e5;">&quot;check1&quot;</span><span style="color:#ed77e5;"> </span><span style="color:#ffab66;">id</span><span style="color:#ed77e5;">=</span><span style="color:#5959e5;">&quot;Check1&quot;</span><span style="color:#ed77e5;"> </span><span style="color:#ffab66;">value</span><span style="color:#ed77e5;">=</span><span style="color:#5959e5;">&quot;1&quot;</span><span style="color:#ed77e5;"> </span><span style="color:#ffab66;">checked</span><span style="color:#ed77e5;">=</span><span style="color:#5959e5;">&quot;checked&quot;</span><span style="color:#ed77e5;"> /&gt;</span>
+<span style="color:#ed77e5;">&lt;/div&gt;</span>
+</pre>
+		<p>JavaScript:</p>
+		<pre style="text-align:left;color:#ffffff; background-color:#181818; border:solid black 1px; padding:0.5em 1em 0.5em 1em; overflow:auto;font-size:small; font-family:monospace; ">$(<span style="color:#f0898f;">'#Check1'</span>).<span style="color:#96c9ff;">checkbox</span>();</pre>
+		
+		<p>HTML after applying checkbox markup:</p>
+<pre style="text-align:left;color:#ffffff; background-color:#181818; border:solid black 1px; padding:0.5em 1em 0.5em 1em; overflow:auto;font-size:small; font-family:monospace; "><span style="color:#ed77e5;">&lt;div </span><span style="color:#ffab66;">class</span><span style="color:#ed77e5;">=</span><span style="color:#5959e5;">&quot;checkbox&quot;</span><span style="color:#ed77e5;"> </span><span style="color:#ffab66;">style</span><span style="color:#ed77e5;">=</span><span style="color:#5959e5;">&quot;overflow: hidden;&quot;</span><span style="color:#ed77e5;">&gt;</span>
+    <span style="color:#ed77e5;">&lt;label </span><span style="color:#ffab66;">for</span><span style="color:#ed77e5;">=</span><span style="color:#5959e5;">&quot;Check1&quot;</span><span style="color:#ed77e5;">&gt;</span>Option 1<span style="color:#ed77e5;">&lt;/label&gt;</span>
+    <span style="color:#ed77e5;">&lt;div </span><span style="color:#ffab66;">class</span><span style="color:#ed77e5;">=</span><span style="color:#5959e5;">&quot;jquery-checkbox-wrapper&quot;</span><span style="color:#ed77e5;">&gt;&lt;a </span><span style="color:#ffab66;">name</span><span style="color:#ed77e5;">=</span><span style="color:#5959e5;">&quot;Check1&quot;</span><span style="color:#ed77e5;"> </span><span style="color:#ffab66;">href</span><span style="color:#ed77e5;">=</span><span style="color:#5959e5;">&quot;#&quot;</span><span style="color:#ed77e5;"> </span><span style="color:#ffab66;">class</span><span style="color:#ed77e5;">=</span><span style="color:#5959e5;">&quot;jquery-checkbox&quot;</span><span style="color:#ed77e5;">&gt;&lt;/a&gt;&lt;/div&gt;</span>
+    <span style="color:#ed77e5;">&lt;input </span><span style="color:#ffab66;">type</span><span style="color:#ed77e5;">=</span><span style="color:#5959e5;">&quot;checkbox&quot;</span><span style="color:#ed77e5;"> </span><span style="color:#ffab66;">checked</span><span style="color:#ed77e5;">=</span><span style="color:#5959e5;">&quot;checked&quot;</span><span style="color:#ed77e5;"> </span><span style="color:#ffab66;">value</span><span style="color:#ed77e5;">=</span><span style="color:#5959e5;">&quot;1&quot;</span><span style="color:#ed77e5;"> </span><span style="color:#ffab66;">id</span><span style="color:#ed77e5;">=</span><span style="color:#5959e5;">&quot;Check1&quot;</span><span style="color:#ed77e5;"> </span><span style="color:#ffab66;">name</span><span style="color:#ed77e5;">=</span><span style="color:#5959e5;">&quot;check1&quot;</span><span style="color:#ed77e5;"> </span><span style="color:#ffab66;">style</span><span style="color:#ed77e5;">=</span><span style="color:#5959e5;">&quot;position: absolute; top: -200px; left: -200px;&quot;</span><span style="color:#ed77e5;">&gt;</span>
+<span style="color:#ed77e5;">&lt;/div&gt;</span>
+</pre>
+		<p>NOTE: The top and left positioning of the input itself is done to keep label working in IE 7+.</p>
+		<p><strong>Styling</strong></p>
+		<p>You can style the output HTML as you please. Take a look at CSS for demos to see how it's done.</p>
+		<p><strong>Compatibility</strong></p>
+		<p>The plugin has been tested and is compatible with Internet Explorer 7+, Firefox 3.6+, Opera 10, Safari 5 and Google Chrome.</p>
+		<p><strong>Options</strong></p>
+		<p>You can pass additional options to the checkbox method to customize class names. Take a look at JavaScript for demos.</p>
+<pre style="text-align:left;color:#ffffff; background-color:#181818; border:solid black 1px; padding:0.5em 1em 0.5em 1em; overflow:auto;font-size:small; font-family:monospace; ">$(<span style="color:#f0898f;">'#demo2 input'</span>).<span style="color:#96c9ff;">checkbox</span>({
+    className: <span style="color:#f0898f;">'jquery-switch'</span>,
+    checkedClass: <span style="color:#f0898f;">'jquery-switch-on'</span>,
+});
+</pre>
+		<p><strong>License</strong></p>
+		<p>The plugin in licensed under <a href="http://www.opensource.org/licenses/mit-license.php">MIT license</a>.</p>
+		<p><strong>Download</strong></p>
+		<p>ZIP (includes this page and the minified plugin): <a href="http://dl.dropbox.com/u/1553504/jquery-checkbox-1.0.zip">jquery-checkbox-1.0.zip</a></p>
+		<p>GitHub: <a href="https://github.com/tomekwojcik/jQuery-Custom-Checkboxes">Repository</a></p>
+	</body>
+</html>
