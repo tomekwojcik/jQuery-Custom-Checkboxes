@@ -16,42 +16,42 @@ jQuery.fn.checkbox = function(options) {
 		className: 'jquery-checkbox',
 		checkedClass: 'jquery-checkbox-on'
 	};
-	
+
 	var settings = jQuery.extend(defaults, options || {});
-	
+
 	return this.each(function() {
 		var _this = jQuery(this);
-		
+
 		var _replacement = jQuery(
 			'<div class="' + settings.className + '-wrapper">' +
 				'<a class="' + settings.className + '" href="#" name="' + _this.attr('id') + '"></a>' + 
 			'</div>'
 		);
-		
-		if (_this.attr('checked') == true) {
+
+		if (_this.attr('checked') == true || _this.attr('checked') == "checked") {
 			jQuery('a', _replacement).addClass(settings.checkedClass);
 		} // eof if()
-		
+
 		jQuery('a', _replacement).click(function() {
 			var _input = jQuery('input#' + jQuery(this).attr('name'), _replacement.parent());
-			if (_input.attr('checked') == true) {
+			if (_input.attr('checked') == true || _input.attr('checked') == "checked") {
 				_input.removeAttr('checked');
 			} else {
 				_input.attr('checked', true);
 			} // eof if()
 			_input.change();
-			
+
 			return false;
 		});
 		jQuery(_this).change(function() {
 			var _input = jQuery(this);
-			if (_input.attr('checked') == true) {
+			if (_input.attr('checked') == true || _input.attr('checked') == "checked") {
 				jQuery('a[name=' + _input.attr('id') + ']', _replacement.parent()).addClass(settings.checkedClass);
 			} else {
 				jQuery('a[name=' + _input.attr('id') + ']', _replacement.parent()).removeClass(settings.checkedClass);
 			} // eof if()
 		});
-		
+
 		_this.css({ 'position': 'absolute', 'top': '-200px', 'left': '-200px'}).before(_replacement);
 		_replacement.parent().css('overflow', 'hidden');
 	});
