@@ -34,10 +34,10 @@ jQuery.fn.checkbox = function(options) {
 
 		jQuery('a', _replacement).click(function() {
 			var _input = jQuery('input#' + jQuery(this).attr('name'), _replacement.parent());
-			if (_input.attr('checked') == true || _input.attr('checked') == "checked") {
+			if (_input.attr('checked') == 'checked' || _input.attr('checked') == "checked") {
 				_input.removeAttr('checked');
 			} else {
-				_input.attr('checked', true);
+				_input.attr('checked', 'checked');
 			} // eof if()
 			_input.change();
 
