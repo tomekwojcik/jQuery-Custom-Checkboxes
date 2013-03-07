@@ -10,6 +10,7 @@
  * @package jquery
  * @subpakage ui.checkbox
  * @author Tomasz Wójcik <labs@tomekwojcik.pl>
+ * @contributor Nicolas Turlais
  */
 (function() {
     jQuery.fn.checkbox = function(options) {
@@ -26,13 +27,13 @@
             var self = jQuery(this);
             
             var replacement = jQuery(
-    			'<div class="' + settings.className + '-wrapper">' +
-    				'<a class="' + settings.className + '" href="#" name="' + self.attr('id') + '"></a>' + 
-    			'</div>'
-    		);
-    		var element = jQuery('a', replacement);
-    		
-            if (self.attr('checked') === 'checked') {
+                '<div class="' + settings.className + '-wrapper">' +
+                    '<a class="' + settings.className + '" href="#" name="' + self.attr('id') + '"></a>' + 
+                '</div>'
+            );
+            var element = jQuery('a', replacement);
+            
+            if (self.prop('checked')) {
                 element.addClass(settings.checkedClass);
             }
             
@@ -41,24 +42,24 @@
                 event.stopPropagation();
                 
                 var input = jQuery('input#' + jQuery(this).attr('name'), replacement.parent());
-    			if (input.attr('checked') === 'checked') {
-    				input.removeAttr('checked');
-    			} else {
-    				input.attr('checked', 'checked');
-    			}
-    			input.trigger('change');
+                if (input.prop('checked')) {
+                    input.removeAttr('checked');
+                } else {
+                    input.prop('checked', true);
+                }
+                input.trigger('change');
                 
                 return false;
             });
             
             self.on('change', function(event) {
                 var input = jQuery(this);
-    			if (input.attr('checked') === 'checked') {
-    				jQuery('a[name=' + input.attr('id') + ']', replacement.parent()).addClass(settings.checkedClass);
-    			} else {
-    				jQuery('a[name=' + input.attr('id') + ']', replacement.parent()).removeClass(settings.checkedClass);
-    			}
-    			
+                if (input.prop('checked')) {
+                    jQuery('a[name=' + input.attr('id') + ']', replacement.parent()).addClass(settings.checkedClass);
+                } else {
+                    jQuery('a[name=' + input.attr('id') + ']', replacement.parent()).removeClass(settings.checkedClass);
+                }
+                
                 return true;
             });
             
